@@ -30,7 +30,7 @@ public abstract class Motorista {
 	}
 
 	public String getNome() {
-		return nome;
+		return new String(this.nome);
 	}
 
 	public void setNome(String nome) {
@@ -46,11 +46,9 @@ public abstract class Motorista {
 	}
 
 	public String getCodigoIdentificador() {
-		return codigoIdentificador;
+		return new String(this.codigoIdentificador);
 	}
 	
-	
-
 	public abstract double calculaSalario();
 	
 	public abstract Motorista copiaMotorista();
