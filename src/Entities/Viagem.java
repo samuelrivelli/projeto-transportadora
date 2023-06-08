@@ -43,7 +43,6 @@ public class Viagem {
 		return kmFinal;
 	}
 
-	// Ajustar para retornar uma copia de data
 	public String getData() {
 		DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		return this.data.format(formato);
@@ -67,7 +66,7 @@ public class Viagem {
 
 	@Override
 	public String toString() {
-		return "Motorista=" + motorista + "\nVeiculo=" + veiculo + "\nKmInicial=" + kmInicial + "\nKmFinal="
+		return motorista + "\nVeiculo=" + veiculo + "\nKmInicial=" + kmInicial + "\nKmFinal="
 				+ kmFinal + "\nData=" + data + "\nValorCobrado=" + valorCobrado ;
 	}
 

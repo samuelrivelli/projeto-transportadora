@@ -13,7 +13,7 @@ public class TesteMotoristaEventual {
 		
 		LocalDate data = LocalDate.now();
 
-		Motorista motorista1 = new MotoristaEventual("Sergio", "sergio@email.com",100);
+		Motorista motorista1 = new MotoristaEventual("Sergio Vilela", "sergio@email.com",true,2);
 		
 		Veiculo veiculo1 = new Veiculo("xxx-9999", 45000);
 

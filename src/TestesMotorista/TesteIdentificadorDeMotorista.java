@@ -8,8 +8,8 @@ import Entities.MotoristaEventual;
 public class TesteIdentificadorDeMotorista {
 
 	public static void main(String[] args) {
-		Motorista motorista1 = new MotoristaEventual("Sergio", "sergio@email.com",30);
-		Motorista motorista2 = new MotoristaAssalariado("Sergio", "sergio@email.com",400);
+		Motorista motorista1 = new MotoristaEventual("Sergio Pereira", "sergio@email.com",true,30);
+		Motorista motorista2 = new MotoristaAssalariado("Maria Silva", "Maria@email.com",false,400);
 	
 		System.out.println(IdentificadorDeMotorista.identificarTipoMotorista(motorista1));
 		
