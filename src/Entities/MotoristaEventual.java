@@ -4,44 +4,28 @@ import Excecoes.SalarioExcedidoException;
 
 public class MotoristaEventual extends Motorista {
 
-	private double salarioPorViagem;
+	private double salarioPorKm;
 
 	public MotoristaEventual(String nome, String email, Boolean sexo, double salarioPorViagem) {
 		super(nome, email, sexo);
-		this.salarioPorViagem = salarioPorViagem;
+		this.salarioPorKm = salarioPorViagem;
 
 	}
 
 	public MotoristaEventual(MotoristaEventual motoristaEventual) {
 		super(motoristaEventual.getNome(), motoristaEventual.getEmail(), motoristaEventual.getCodigoIdentificador());
-		this.salarioPorViagem = motoristaEventual.salarioPorViagem;
+		this.salarioPorKm = motoristaEventual.salarioPorKm;
 	}
 
 	@Override
-	public double calculaSalario() {
-		Double salarioCalculado = salarioPorViagem * Movimentacao.calculaKmRodados(this);
-		Double salarioTotal = null;
+	public double calculaSalario() throws SalarioExcedidoException {
 
-		try {
-			if (salarioCalculado > Movimentacao.calculaKmRodados(this)) {
-				throw new SalarioExcedidoException("O salario nao pode exceder a quantiade de km rodados");
-			}
-			else {
-				salarioTotal = salarioCalculado;
-			}
-		} catch (SalarioExcedidoException e) {
-			e.printStackTrace();
+		if (this.salarioPorKm > 1) {
+			throw new SalarioExcedidoException("O salario nao pode exceder a quantiade de km rodados");
 		}
-
-		if (salarioTotal != null) {
-			return salarioCalculado;
-		} else {
-			return 0;
-		}
+		return salarioPorKm * Movimentacao.calculaKmRodados(this);
 
 	}
-
-	
 
 	@Override
 	public Motorista copiaMotorista() {

@@ -1,5 +1,7 @@
 package Entities;
 
+import Excecoes.SalarioExcedidoException;
+
 public abstract class Motorista {
 	private String nome;
 	private String email;
@@ -60,7 +62,7 @@ public abstract class Motorista {
 		return new String(this.codigoIdentificador);
 	}
 
-	public abstract double calculaSalario();
+	public abstract double calculaSalario() throws SalarioExcedidoException;
 
 	public abstract Motorista copiaMotorista();
 

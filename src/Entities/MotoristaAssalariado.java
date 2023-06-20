@@ -19,28 +19,12 @@ public class MotoristaAssalariado extends Motorista {
 	}
 
 	@Override
-	public double calculaSalario() {
-		Double salarioCalculado = null;
-		
-		try {
-			if (salario < Movimentacao.calculaKmRodados(this)) {
-				throw new SalarioExcedidoException("O salario nao pode exceder a quantiade de km rodados");
-			}
-			else {
-				salarioCalculado = this.salario;
-			}
-		}
-		catch (SalarioExcedidoException e) {
-			e.printStackTrace();
-		}
-		
-		if(salarioCalculado != null) {
-			return salarioCalculado;
-		}
-		else {
-			return 0;
-		}
+	public double calculaSalario() throws SalarioExcedidoException {
 
+		if (salario < Movimentacao.calculaKmRodados(this)) {
+			throw new SalarioExcedidoException("O salario nao pode exceder a quantiade de km rodados");
+		}
+		return this.salario;
 	}
 
 	@Override

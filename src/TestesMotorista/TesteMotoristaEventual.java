@@ -7,13 +7,14 @@ import Entities.MotoristaEventual;
 import Entities.Movimentacao;
 import Entities.Veiculo;
 import Entities.Viagem;
+import Excecoes.SalarioExcedidoException;
 
 public class TesteMotoristaEventual {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SalarioExcedidoException  {
 		
 		LocalDate data = LocalDate.now();
 
-		Motorista motorista1 = new MotoristaEventual("Sergio Vilela", "sergio@email.com",true,2);
+		Motorista motorista1 = new MotoristaEventual("Sergio Vilela", "sergio@email.com",true,1);
 		
 		Veiculo veiculo1 = new Veiculo("xxx-9999", 45000);
 
@@ -30,7 +31,10 @@ public class TesteMotoristaEventual {
 		System.out.println();
 		System.out.println("Copia motorista: " +motorista1.copiaMotorista());
 		
+		System.out.println();
+		
 		System.out.println("Salario do motorista eventual 1: "+ motorista1.calculaSalario());
+	
 
 		
 	}
