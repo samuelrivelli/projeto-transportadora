@@ -13,11 +13,10 @@ public class TesteMotoristaEventual {
 
 		LocalDate data = LocalDate.now();
 
-		MotoristaEventual motorista1 = new MotoristaEventual("Sergio Vilela", "sergio@email.com", true);
+		MotoristaEventual motorista1 = new MotoristaEventual("Sergio Vilela", "sergio@email.com", true, 1.5);
 		try {
-			motorista1.alteraSalarioPorKm(1.4);
+			motorista1.alteraSalarioPorKm(0.5);
 		} catch (SalarioExcedidoException e) {
-
 			System.out.println(e.getMessage());
 		}
 		Veiculo veiculo1 = new Veiculo("xxx-9999", 45000);
@@ -37,13 +36,7 @@ public class TesteMotoristaEventual {
 
 		System.out.println();
 
-		try {
-			System.out.println("Salario do motorista eventual 1: " + motorista1.calculaSalario());
-		} catch (SalarioExcedidoException e) {
-			// TODO Auto-generated catch block
-			System.out.println(e.getMessage());
-			e.printStackTrace();
-		}
+		System.out.println("Salario do motorista eventual 1: " + motorista1.calculaSalario());
 
 	}
 
