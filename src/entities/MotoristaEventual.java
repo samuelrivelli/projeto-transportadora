@@ -11,7 +11,7 @@ public class MotoristaEventual extends Motorista {
 		try {
 			this.alteraSalarioPorKm(salarioPorKm);
 		} catch (SalarioExcedidoException e) {
-			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
 	}
@@ -26,7 +26,6 @@ public class MotoristaEventual extends Motorista {
 		return this.salarioPorKm * Movimentacao.calculaKmRodados(this);
 	}
 	
-	//resolver esse trem doido aqui
 	public void alteraSalarioPorKm(double salarioPorKm) throws SalarioExcedidoException {
 		if (salarioPorKm > 1.0) {
 			throw new SalarioExcedidoException("Salario nao poder exceder 1 real por km!");

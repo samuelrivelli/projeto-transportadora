@@ -15,9 +15,9 @@ public class TesteRelatorioPorNome {
 		LocalDate data = LocalDate.now();
 
 		Motorista motorista1 = new MotoristaAssalariado("Sergio", "sergio@email",true, 4500);
-		Motorista motorista2 = new MotoristaEventual("Pedro", "pedro@email",true);
+		Motorista motorista2 = new MotoristaEventual("Pedro", "pedro@email",true,0.7);
 		Motorista motorista3 = new MotoristaAssalariado("Abner", "abner@email",true, 3600);
-		Motorista motorista4 = new MotoristaEventual("Bruno", "bruno@email",true);
+		Motorista motorista4 = new MotoristaEventual("Bruno", "bruno@email",true, 0.9);
 		
 		
 		Veiculo veiculo1 = new Veiculo("placa-teste", 45000);

@@ -14,11 +14,7 @@ public class TesteMotoristaEventual {
 		LocalDate data = LocalDate.now();
 
 		MotoristaEventual motorista1 = new MotoristaEventual("Sergio Vilela", "sergio@email.com", true, 1.5);
-		try {
-			motorista1.alteraSalarioPorKm(0.5);
-		} catch (SalarioExcedidoException e) {
-			System.out.println(e.getMessage());
-		}
+		
 		Veiculo veiculo1 = new Veiculo("xxx-9999", 45000);
 
 		Viagem viagem1 = new Viagem(motorista1, veiculo1, 5, 10, data, 60);
