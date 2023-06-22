@@ -1,8 +1,10 @@
-package Entities;
+package entities;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+
+import excecoes.SalarioExcedidoException;
 
 public class Viagem {
 

@@ -1,11 +1,11 @@
-package TestesViagem;
+package testesViagem;
 
 import java.time.LocalDate;
 
-import Entities.Motorista;
-import Entities.MotoristaAssalariado;
-import Entities.Veiculo;
-import Entities.Viagem;
+import entities.Motorista;
+import entities.MotoristaAssalariado;
+import entities.Veiculo;
+import entities.Viagem;
 
 public class TestesViagem {
 

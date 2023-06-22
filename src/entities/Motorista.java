@@ -1,6 +1,6 @@
-package Entities;
+package entities;
 
-import Excecoes.SalarioExcedidoException;
+import excecoes.SalarioExcedidoException;
 
 public abstract class Motorista {
 	private String nome;
@@ -61,6 +61,18 @@ public abstract class Motorista {
 	public String getCodigoIdentificador() {
 		return new String(this.codigoIdentificador);
 	}
+	
+	public String getCategoria() {
+		if(Movimentacao.calculaKmRodados(this)>500000) {
+			return "Categoria A";
+		}
+		else if(Movimentacao.calculaKmRodados(this)>250000 && Movimentacao.calculaKmRodados(this)<500000){
+			return "Categoria B";
+		}
+		else {
+			return "Categoria C";
+		}
+	}
 
 	public abstract double calculaSalario() throws SalarioExcedidoException;
 
@@ -72,5 +84,7 @@ public abstract class Motorista {
 	public String toString() {
 		return "Motorista: " + nome + "\nEmail: " + email + "\nCodigo Identificador: " + this.codigoIdentificador;
 	}
+
+	
 
 }

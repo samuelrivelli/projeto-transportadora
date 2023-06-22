@@ -1,13 +1,15 @@
-package Entities;
+package entities;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import excecoes.SalarioExcedidoException;
+
 public class Movimentacao {
 
-	private static ArrayList<Viagem> listaViagens;
+	private static List<Viagem> listaViagens;
 
 	public Movimentacao() {
 		listaViagens = new ArrayList<Viagem>();
@@ -47,7 +49,7 @@ public class Movimentacao {
 		}
 	}
 
-	public static int calculaKmRodados(Motorista motorista) {
+	public static int calculaKmRodados(Motorista motorista)  {
 		if (listaViagens == null) {
 			listaViagens = new ArrayList<Viagem>();
 		}
@@ -60,9 +62,9 @@ public class Movimentacao {
 		return kmRodados;
 	}
 
-	public static void relatorioPorNome() {
-
-		Collections.sort(listaViagens, new Comparator<Viagem>() {
+	public static void relatorioPorNome()  {
+		
+		Collections.sort(listaViagens, new Comparator<Viagem> () {
 			public int compare(Viagem v1, Viagem v2) {
 				return v1.getMotorista().getNome().compareTo(v2.getMotorista().getNome());
 			}
@@ -74,7 +76,7 @@ public class Movimentacao {
 		}
 	}
 	
-	public static void relatorioPorSalario() {
+	public static void relatorioPorValorDaViagem() {
 		Collections.sort(listaViagens, new Comparator<Viagem>() {
 			public int compare(Viagem v1, Viagem v2) {
 				return Double.compare(v2.getValorCobrado(), v1.getValorCobrado());

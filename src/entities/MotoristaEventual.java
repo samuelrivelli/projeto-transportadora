@@ -1,30 +1,33 @@
-package Entities;
+package entities;
 
-import Excecoes.SalarioExcedidoException;
+import excecoes.SalarioExcedidoException;
 
 public class MotoristaEventual extends Motorista {
 
 	private double salarioPorKm;
 
-	public MotoristaEventual(String nome, String email, Boolean sexo, double salarioPorViagem) {
+	public MotoristaEventual(String nome, String email, Boolean sexo) {
 		super(nome, email, sexo);
-		this.salarioPorKm = salarioPorViagem;
 
 	}
 
 	public MotoristaEventual(MotoristaEventual motoristaEventual) {
 		super(motoristaEventual.getNome(), motoristaEventual.getEmail(), motoristaEventual.getCodigoIdentificador());
-		this.salarioPorKm = motoristaEventual.salarioPorKm;
+
 	}
 
 	@Override
 	public double calculaSalario() throws SalarioExcedidoException {
-
-		if (this.salarioPorKm > 1) {
-			throw new SalarioExcedidoException("O salario nao pode exceder a quantiade de km rodados");
-		}
+		this.alteraSalarioPorKm(salarioPorKm);
 		return salarioPorKm * Movimentacao.calculaKmRodados(this);
-
+	}
+	
+	//resolver esse trem doido aqui
+	public void alteraSalarioPorKm(double salarioPorKm) throws SalarioExcedidoException {
+		if (salarioPorKm > 1) {
+			throw new SalarioExcedidoException("Salario nao poder exceder 1 real por km!");
+		}
+		this.salarioPorKm = salarioPorKm;
 	}
 
 	@Override

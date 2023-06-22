@@ -1,8 +1,8 @@
 package tratamento;
 
-import Entities.Motorista;
-import Entities.MotoristaAssalariado;
-import Entities.Tratamento;
+import entities.Motorista;
+import entities.MotoristaAssalariado;
+import entities.Tratamento;
 
 public class testeTratamento {
 

@@ -1,15 +1,15 @@
-package TestesMotorista;
+package testesMotorista;
 
 import java.time.LocalDate;
 
-import Entities.Motorista;
-import Entities.MotoristaAssalariado;
-import Entities.MotoristaEventual;
-import Entities.Movimentacao;
-import Entities.Tratamento;
-import Entities.Veiculo;
-import Entities.Viagem;
-import Excecoes.SalarioExcedidoException;
+import entities.Motorista;
+import entities.MotoristaAssalariado;
+import entities.MotoristaEventual;
+import entities.Movimentacao;
+import entities.Tratamento;
+import entities.Veiculo;
+import entities.Viagem;
+import excecoes.SalarioExcedidoException;
 
 public class TesteMotoristaAssalariado {
 
@@ -17,8 +17,8 @@ public class TesteMotoristaAssalariado {
 		
 		LocalDate data = LocalDate.now();
 		
-		Motorista motorista1 = new MotoristaAssalariado("Sergio Silva", "sergio@email.com",true,1);
-		Motorista motorista2 = new MotoristaAssalariado("Maria Teixeira", "maria@email.com",false,1);
+		Motorista motorista1 = new MotoristaAssalariado("Sergio Silva", "sergio@email.com",true,1500);
+		Motorista motorista2 = new MotoristaAssalariado("Maria Teixeira", "maria@email.com",false,2300);
 		
 		Veiculo veiculo1 = new Veiculo("xxx-9999", 45000);
 		

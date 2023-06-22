@@ -1,6 +1,6 @@
-package TestesVeiculo;
+package testesVeiculo;
 
-import Entities.Veiculo;
+import entities.Veiculo;
 
 public class TestesVeiculo {
 

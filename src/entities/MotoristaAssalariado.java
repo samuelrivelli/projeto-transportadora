@@ -1,6 +1,4 @@
-package Entities;
-
-import Excecoes.SalarioExcedidoException;
+package entities;
 
 public class MotoristaAssalariado extends Motorista {
 
@@ -19,11 +17,7 @@ public class MotoristaAssalariado extends Motorista {
 	}
 
 	@Override
-	public double calculaSalario() throws SalarioExcedidoException {
-
-		if (salario < Movimentacao.calculaKmRodados(this)) {
-			throw new SalarioExcedidoException("O salario nao pode exceder a quantiade de km rodados");
-		}
+	public double calculaSalario()  {
 		return this.salario;
 	}
 
@@ -36,5 +30,6 @@ public class MotoristaAssalariado extends Motorista {
 	public String getDescricao() {
 		return "Motorista assalariado";
 	}
+	
 
 }

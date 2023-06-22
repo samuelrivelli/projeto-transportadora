@@ -1,13 +1,13 @@
-package TestesMovimentacao;
+package testesMovimentacao;
 
 import java.time.LocalDate;
 
-import Entities.Motorista;
-import Entities.MotoristaAssalariado;
-import Entities.MotoristaEventual;
-import Entities.Movimentacao;
-import Entities.Veiculo;
-import Entities.Viagem;
+import entities.Motorista;
+import entities.MotoristaAssalariado;
+import entities.MotoristaEventual;
+import entities.Movimentacao;
+import entities.Veiculo;
+import entities.Viagem;
 
 public class TesteRelatorioPorNome {
 
@@ -15,9 +15,10 @@ public class TesteRelatorioPorNome {
 		LocalDate data = LocalDate.now();
 
 		Motorista motorista1 = new MotoristaAssalariado("Sergio", "sergio@email",true, 4500);
-		Motorista motorista2 = new MotoristaEventual("Pedro", "pedro@email",true, 1);
+		Motorista motorista2 = new MotoristaEventual("Pedro", "pedro@email",true);
 		Motorista motorista3 = new MotoristaAssalariado("Abner", "abner@email",true, 3600);
-		Motorista motorista4 = new MotoristaEventual("Bruno", "bruno@email",true, 0.8);
+		Motorista motorista4 = new MotoristaEventual("Bruno", "bruno@email",true);
+		
 		
 		Veiculo veiculo1 = new Veiculo("placa-teste", 45000);
 		Veiculo veiculo2 = new Veiculo("placa-teste2", 45000);
