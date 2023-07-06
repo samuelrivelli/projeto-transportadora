@@ -25,8 +25,8 @@ public class TesteMotoristaAssalariado {
 		Viagem viagem1 = new Viagem(motorista1, veiculo1, 5, 1200,data, 60);
 		Viagem viagem2 = new Viagem(motorista2, veiculo1, 5, 1300, data, 60);
 		
-		Movimentacao.addViagem(viagem1);
-		Movimentacao.addViagem(viagem2);
+		Movimentacao.getListaViagens().addElemento(viagem1);
+		Movimentacao.getListaViagens().addElemento(viagem2);
 	
 		System.out.println(motorista1.toString());
 		

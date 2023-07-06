@@ -20,9 +20,9 @@ public class TesteMotoristaEventual {
 		Viagem viagem1 = new Viagem(motorista1, veiculo1, 5, 10, data, 60);
 		Viagem viagem2 = new Viagem(motorista1, veiculo1, 5, 20, data, 60);
 
-		Movimentacao.addViagem(viagem1);
-		Movimentacao.addViagem(viagem2);
-
+		Movimentacao.getListaViagens().addElemento(viagem1);
+		Movimentacao.getListaViagens().addElemento(viagem2);
+		
 		System.out.println(viagem1.toString());
 		System.out.println("Distancia percorrida: " + viagem1.distanciaPercorrida());
 		System.out.println();

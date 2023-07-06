@@ -28,10 +28,10 @@ public class TesteRelatorioPorNome {
 		Viagem viagem3 = new Viagem(motorista3, veiculo2, 12, 326, data, 50);
 		Viagem viagem4 = new Viagem(motorista4, veiculo2, 12, 2000, data, 50);
 
-		Movimentacao.addViagem(viagem1);
-		Movimentacao.addViagem(viagem2);
-		Movimentacao.addViagem(viagem3);
-		Movimentacao.addViagem(viagem4);
+		Movimentacao.getListaViagens().addElemento(viagem1);
+		Movimentacao.getListaViagens().addElemento(viagem2);
+		Movimentacao.getListaViagens().addElemento(viagem3);
+		Movimentacao.getListaViagens().addElemento(viagem4);
 		
 		System.out.println("Relatorio por ordem alfabetica: ");
 		System.out.println();

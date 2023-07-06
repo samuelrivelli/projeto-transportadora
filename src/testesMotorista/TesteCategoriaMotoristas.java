@@ -23,9 +23,9 @@ public class TesteCategoriaMotoristas {
 		Viagem viagem2 = new Viagem(motorista2, veiculo1, 5, 1300, data, 60);
 		Viagem viagem3 = new Viagem(motorista3, veiculo1, 5, 260000, data, 60);
 		
-		Movimentacao.addViagem(viagem1);
-		Movimentacao.addViagem(viagem2);
-		Movimentacao.addViagem(viagem3);
+		Movimentacao.getListaViagens().addElemento(viagem1);
+		Movimentacao.getListaViagens().addElemento(viagem2);
+		Movimentacao.getListaViagens().addElemento(viagem3);
 		
 		System.out.println("Categoria motorista 1:" + motorista1.getCategoria());
 		System.out.println("Categoria motorista 2:" + motorista2.getCategoria());
