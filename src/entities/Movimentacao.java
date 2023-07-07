@@ -1,12 +1,8 @@
 package entities;
 
 import java.util.ArrayList;
-
 import java.util.Collections;
-
 import java.util.Comparator;
-
-import java.util.List;
 
 public class Movimentacao {
 
@@ -62,45 +58,31 @@ public class Movimentacao {
 
 	public static void relatorioPorNome() {
 
-		Collections.sort(listaViagens, new Comparator<Viagem>() {
-
-			public int compare(Viagem v1, Viagem v2) {
-
-				return v1.getMotorista().getNome().compareTo(v2.getMotorista().getNome());
-
-			}
-
-		});
-
-		for (Viagem viagem : listaViagens) {
-
-			System.out.println(viagem.toString());
-
-			System.out.println();
-
-		}
+		ArrayList<Viagem> arrayListViagens = new ArrayList<Viagem>(listaViagens);
+        Collections.sort(arrayListViagens, new Comparator<Viagem>() {
+            public int compare(Viagem v1, Viagem v2) {
+                return v1.getMotorista().getNome().compareTo(v2.getMotorista().getNome());
+            }
+        });
+        for (Viagem viagem : arrayListViagens) {
+            System.out.println(viagem.toString());
+            System.out.println();
+        }
 
 	}
 
 	public static void relatorioPorValorDaViagem() {
-
-		Collections.sort(listaViagens, new Comparator<Viagem>() {
-
-			public int compare(Viagem v1, Viagem v2) {
-
-				return Double.compare(v2.getValorCobrado(), v1.getValorCobrado());
-
-			}
-
-		});
-
-		for (Viagem viagem : listaViagens) {
-
-			System.out.println(viagem.toString());
-
-			System.out.println();
-
-		}
+		 
+		ArrayList<Viagem> arrayListViagens = new ArrayList<Viagem>(listaViagens);
+	        Collections.sort(arrayListViagens, new Comparator<Viagem>() {
+	            public int compare(Viagem v1, Viagem v2) {
+	                return Double.compare(v2.getValorCobrado(), v1.getValorCobrado());
+	            }
+	        });
+	        for (Viagem viagem : arrayListViagens) {
+	            System.out.println(viagem.toString());
+	            System.out.println();
+	        }
 
 	}
 

@@ -1,5 +1,8 @@
 package entities;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import excecoes.SalarioExcedidoException;
 
 public abstract class Motorista {
@@ -62,15 +65,21 @@ public abstract class Motorista {
 		return new String(this.codigoIdentificador);
 	}
 	
-	public String getCategoria() {
+	public void getCategoria() {
 		if(Movimentacao.calculaKmRodados(this)>500000) {
-			return "Categoria A";
+			Map<String,String> categoria = new HashMap<>();
+			categoria.put(codigoIdentificador, "Categoria A");
+			System.out.println(categoria);
 		}
 		else if(Movimentacao.calculaKmRodados(this)>250000 && Movimentacao.calculaKmRodados(this)<500000){
-			return "Categoria B";
+			Map<String,String> categoria = new HashMap<>();
+			categoria.put(codigoIdentificador, "Categoria B");
+			System.out.println(categoria);
 		}
 		else {
-			return "Categoria C";
+			Map<String,String> categoria = new HashMap<>();
+			categoria.put(codigoIdentificador, "Categoria C");
+			System.out.println(categoria);
 		}
 	}
 

@@ -9,7 +9,7 @@ import entities.Movimentacao;
 import entities.Veiculo;
 import entities.Viagem;
 
-public class TesteRelatorioPorSalario {
+public class TesteRelatorioPorValorViagem {
 
 	public static void main(String[] args) {
 		LocalDate data = LocalDate.now();
@@ -32,7 +32,7 @@ public class TesteRelatorioPorSalario {
 		Movimentacao.getListaViagens().addElemento(viagem3);
 		Movimentacao.getListaViagens().addElemento(viagem4);
 		
-		System.out.println("Relatorio por salario: ");
+		System.out.println("Relatorio por valor da viagem: ");
 		System.out.println();
 		Movimentacao.relatorioPorValorDaViagem();
 		System.out.println();

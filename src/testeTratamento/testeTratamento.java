@@ -1,4 +1,4 @@
-package tratamento;
+package testeTratamento;
 
 import entities.Motorista;
 import entities.MotoristaAssalariado;
